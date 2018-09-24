@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black')
+
+:root
+    --text-clr: #1F1F1F
+    --link-clr: #0E35FF
+    --red-clr: #f45
+
+*
+    ::selection
+        color: var(--red-clr)
+        background: var(--red-clr)
+
+*
+    box-sizing: border-box
+
+body
+    background: #F8F8F8
+    overflow-x: hidden
+
+.wrap
+    max-width 1600px
+    height: 100vh
+    margin: 0 auto
+    padding: 0 88px
+    font-family: 'Archivo Black', sans-serif
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    @media screen and (max-width: 600px)
+        padding: 0 60px
+    @media screen and (max-width: 400px)
+        padding: 0 40px
+
+header
+    padding-top: 80px
+    margin-bottom: 40px
+    @media screen and (max-width: 600px)
+        padding-top: 40px
+    h1
+        display: inline-block
+        margin: 0
+        font-size: calc(40px + 7vw)
+        position: relative
+        padding-bottom: 24px
+        background-image: linear-gradient(var(--red-clr) 24%, transparent 60%)
+        background-repeat: no-repeat
+        background-position: 0 60px
+        background-size: 60%
+        // @media screen and (max-width: 600px)
+        //     font-size: 80px
+    p
+        margin: 26px 0 0 0
+
+footer
+    padding-bottom: 40px
+
+.social-links
+    max-width 1300px
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr))
+    gap: 20px
+    padding: 0
+    @media screen and (max-width: 920px)
+        display: flex
+        flex-wrap: wrap
+    @media screen and (max-width: 600px)
+        flex-direction: column
+    li
+        list-style: none
+        margin-bottom: 20px
+        @media screen and (max-width: 920px)
+            margin-right: 50px
+            margin-bottom: 30px
+        a
+            cursor: pointer
+            font-size: 32px
+            text-decoration: none
+            color: var(--link-clr)
+            padding: 10px 4px
+            background-image: linear-gradient(var(--link-clr) 4%, transparent 0%)
+            background-repeat: no-repeat
+            background-position: 0 40px
+            background-size: 100%
+            transition: all 0.2s ease
+            &:hover
+                color: var(--red-clr)
+                background-image: linear-gradient(var(--link-clr) 14%, transparent 40%)
+                background-position: 0 30px
+            @media screen and (max-width: 600px)
+                font-size: 28px
+            @media screen and (max-width: 500px)
+                font-size: calc(8px + 4vw)
+    &__email
+        font-family: serif
