@@ -1,97 +1,290 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo+Black')
+// Stylus vars
+$printres = 820px
+$smalltablet = 560px
+$mobile = 500px
 
+// vars
 :root
-    --text-clr: #1F1F1F
-    --link-clr: #0E35FF
+    --text-clr: #2d2d2d
+    --link-clr: #5d46cc
     --red-clr: #f45
+    --back-clr: #f3f5e7
 
-*
-    ::selection
-        color: var(--red-clr)
-        background: var(--red-clr)
-
+// Global
 *
     box-sizing: border-box
+    ::selection
+        background: #ff44556e
+
+html
+    -webkit-print-color-adjust: exact
+    background: var(--back-clr)
 
 body
-    background: #F8F8F8
-    overflow-x: hidden
+    -webkit-print-color-adjust: exact !important
+    font-family: 'Arial', sans-serif
+    color: var(--text-clr)
 
+h1, h2, h3, h4
+    font-family: 'Archivo Black', sans-serif
+
+p
+    line-height: 160%
+
+a
+    transition: all 0.1s
+    color: var(--link-clr)
+    &:hover
+        color: var(--red-clr)
+
+// Custom
 .wrap
-    max-width 1600px
+    max-width 1100px
+    // background: rgba(0,0,0,0.1)
     height: 100vh
     margin: 0 auto
-    padding: 0 88px
-    font-family: 'Archivo Black', sans-serif
+    padding: 60px 80px
+    @media screen and (max-width: $printres)
+        padding: 40px 60px
+    @media screen and (max-width: $smalltablet)
+        padding: 40px 40px
+
+.bio
+    margin-bottom: 12px
+    display: flex
+    justify-content: space-between
+    @media screen and (max-width: $mobile)
+        flex-direction: column-reverse
+    &__info
+        margin-right: 40px
+        margin-bottom: 20px
+        @media screen and (max-width: $mobile)
+            margin-right: 0
+            margin-bottom: 0
+    &__mail
+        font-style: italic
+    &__title
+        font-family: 'Archivo Black', sans-serif
+        font-size: 1.2em
+        opacity: 0.2
+        margin: 0
+        margin-bottom: 8px
+    &__photo
+        width: 120px
+        min-width 120px
+        height 120px
+        background-color: var(--red-clr)
+        background-image: url(../images/ava.jpg)
+        background-size: cover
+        transform-origin: top right
+        @media screen and (max-width: $mobile)
+            margin-bottom: 20px
+    &__name
+        margin: 0
+        font-family: 'Archivo Black', sans-serif
+        font-size: 3.4em
+        line-height: 90%
+        color: var(--text-clr)
+        margin-bottom: 32px
+        @media screen and (max-width: $printres)
+            font-size: 2.8em
+            margin-bottom: 16px
+    &__dis
+        max-width: 640px
+        color: var(--text-clr)
+        @media screen and (max-width: $printres)
+            font-size: 13px
+
+.lp
     display: flex
     flex-direction: column
-    justify-content: space-between
-    @media screen and (max-width: 600px)
-        padding: 0 60px
-    @media screen and (max-width: 400px)
-        padding: 0 40px
-
-header
-    padding-top: 80px
     margin-bottom: 40px
-    @media screen and (max-width: 600px)
-        padding-top: 40px
-    h1
-        display: inline-block
-        margin: 0
-        font-size: calc(40px + 7vw)
-        position: relative
-        padding-bottom: 24px
-        background-image: linear-gradient(var(--red-clr) 24%, transparent 60%)
-        background-repeat: no-repeat
-        background-position: 0 70px
-        background-size: 60%
-        @media screen and (max-width: 800px)
-            background-position: 0 60px
-        @media screen and (max-width: 600px)
-            background-position: 0 40px
-            background-size: 60% 130%
-    p
-        margin: 26px 0 0 0
+    &__title
+        margin-bottom: 16px
+    &__projects
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: 28px
+        grid-row-gap: 20px
+        @media screen and (max-width: $printres)
+            grid-template-columns: repeat(2, 1fr)
+        @media screen and (max-width: $mobile)
+            grid-template-columns: repeat(1, 1fr)
+        &__item
+            // background: rgba(0,0,0,0.1)
+            &__header
+                font-family: 'Archivo Black', sans-serif
+                font-size: 18px
+                line-height: 130%
+                color: var(--link-clr)
+                &:hover
+                    color: var(--red-clr)
+                @media screen and (max-width: $printres)
+                    font-size: 16px
+            &__preview
+                width: 100%
+                height: 140px
+                background-color: rgba(0,0,0,0.1)
+                background-size: cover
+                filter: grayscale(100%)
+                transition: all 0.1s
+                margin-bottom: 20px
+            &__dis
+                font-size: 14px
+                @media screen and (max-width: $printres)
+                    font-size: 13px
 
-footer
-    padding-bottom: 40px
-
-.social-links
-    max-width 1300px
-    display: grid
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr))
-    gap: 20px
-    padding: 0
-    @media screen and (max-width: 920px)
-        display: flex
-        flex-wrap: wrap
-    @media screen and (max-width: 600px)
+.cs
+    margin-top: 60px
+    margin-bottom: 64px
+    display: flex
+    @media screen and (max-width: $smalltablet)
         flex-direction: column
-    li
-        list-style: none
-        margin-bottom: 20px
-        @media screen and (max-width: 920px)
-            margin-right: 50px
-            margin-bottom: 30px
-        a
-            cursor: pointer
-            font-size: 32px
-            text-decoration: none
-            color: var(--link-clr)
-            padding: 10px 4px
-            background-image: linear-gradient(var(--link-clr) 4%, transparent 0%)
-            background-repeat: no-repeat
-            background-position: 0 40px
-            background-size: 100%
-            transition: all 0.2s ease
-            &:hover
-                color: var(--red-clr)
-                background-image: linear-gradient(var(--link-clr) 14%, transparent 40%)
-                background-position: 0 30px
-            @media screen and (max-width: 600px)
-                font-size: 28px
-            @media screen and (max-width: 500px)
-                font-size: calc(8px + 4vw)
-    &__email
-        font-family: serif
+    &__title
+        white-space: nowrap
+        margin-right: 40px
+        margin-top: 0
+        @media screen and (max-width: $printres)
+            white-space: normal
+    &__projects
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: 28px
+        grid-row-gap: 28px
+        @media screen and (max-width: $mobile)
+            grid-template-columns: repeat(1, 1fr)
+        &__item
+            &__header
+                font-family: 'Archivo Black', sans-serif
+                line-height: 140%
+                font-size: 20px
+                @media screen and (max-width: $printres)
+                    font-size: 18px
+
+.artcls
+    &__items
+        margin-bottom: 48px
+        &__item
+            list-style-type: circle;
+            columns: 3;
+            column-gap: 52px;
+            margin-top: 28px
+            padding-left: 0
+            @media screen and (max-width: $mobile)
+                columns: 1
+            li
+                line-height: 140%
+                margin-bottom: 16px
+
+
+.soc
+    // page-break-before: always
+    margin-bottom: 60px
+    border-bottom: 4px solid var(--text-clr)
+    // @media print
+    //     padding-top: 60px
+    &__title
+        margin-top: 40px
+        margin-bottom: 28px
+    &__items
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(140px, 1fr));
+        margin-bottom: 32px
+        &__item
+            display: flex
+            align-items: center
+            margin-right: 20px
+            margin-bottom: 20px
+            &__logo
+                width: 24px
+                height: 24px
+                // background-color: rgba(0,0,0,0.1)
+                margin-right: 12px
+                background-repeat: no-repeat
+                background-size: cover
+            &__link
+                font-family: 'Archivo Black', sans-serif
+
+.exp
+    page-break-before: always
+    padding-bottom: 60px
+    @media print
+        padding-top: 40px
+        // padding-bottom: 300px
+    &__items
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-column-gap: 40px
+        grid-row-gap: 20px
+        margin-bottom: 40px
+        @media screen and (max-width: $mobile)
+            grid-template-columns: repeat(1, 1fr)
+        &__item
+            margin-top: 16px
+            padding-top: 32px
+            position: relative
+            p
+                line-height: 150%
+            &:after
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                display: block
+                height: 4px
+                width: 12%
+                background: var(--text-clr)
+            &__company
+                font-size: 22px
+                margin-top: 12px
+                margin-bottom: 12px
+            &__details
+                margin-bottom: 28px
+                span
+                    display: block
+                    margin-bottom: 4px
+            &__position
+                font-size: 16px
+            &__year
+                text-transform: uppercase
+                font-size: 12px
+            &__city
+                font-size: 12px
+            &__dis
+                font-size: 14px
+                &__subtitle
+                    opacity: 0.5
+                    font-size: 12px
+                    font-weight: 700
+                    text-transform: uppercase
+                    letter-spacing: 2px
+                ul
+                    padding-left: 16px
+                    margin-bottom: 28px
+                    li
+                        line-height: 130%
+                        margin-bottom: 12px
+
+.hr
+    &1
+        // opacity: 0.3
+        border: 0px solid var(--text-clr)
+        margin-bottom: 16px
+    &2
+        // opacity: 0.3
+        border: 2px solid var(--text-clr)
+        margin-bottom: 16px
+    &8
+        opacity: 0.3
+        border: 8px solid var(--text-clr)
+
+.printback
+    display: none
+    @media print
+        display: block
+        position: absolute
+        z-index: -1
+        top: 0
+        background: var(--back-clr)
+        width: 100%
+        height: 200%

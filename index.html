@@ -1,80 +1,167 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link
-            rel="icon"
-            type="image/png"
-            href="favico/favicon-32x32.png"
-            sizes="32x32"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            href="favico/favicon-16x16.png"
-            sizes="16x16"
-        />
-
-        <title>Pavel Laptev</title>
-        <meta name="description" content="Pavel Laptev webpage" />
-        <meta name="author" content="Pavel Laptev" />
-        <link rel="stylesheet" href="styles/normalize.css" />
-        <link rel="stylesheet" href="styles/style.css" />
-    </head>
-
-    <body>
-        <div class="wrap">
-            <header>
-                <h1>Pavel Laptev</h1>
-                <p>digital design and <nobr>everything else</nobr></p>
-            </header>
-            <footer>
-                <ul class="social-links">
-                    <li>
-                        <a
-                            href="https://medium.com/@PavelLaptev"
-                            target="_blank"
-                            >Medium</a
-                        >
-                    </li>
-                    <li>
-                        <a href="https://github.com/PavelLaptev" target="_blank"
-                            >Github</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://twitter.com/DarioGraphics"
-                            target="_blank"
-                            >Twitter</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.facebook.com/pavel.laptev.94"
-                            target="_blank"
-                            >Facebook</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="http://dariographics.tumblr.com"
-                            target="_blank"
-                            >Tumblr</a
-                        >
-                    </li>
-                    <li class="social-links__email">
-                        <a
-                            href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=laptev.graphics@gmail.com"
-                            target="_blank"
-                            >laptev.graphics@gmail.com</a
-                        >
-                    </li>
-                </ul>
-            </footer>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favico/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favico/favicon-16x16.png" sizes="16x16">
+    <title>Pavel Laptev</title>
+    <meta name="description" content="Pavel Laptev webpage">
+    <meta name="author" content="Pavel Laptev">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="bio">
+        <div class="bio__info">
+          <h1 class="bio__name">Pavel Laptev</h1>
+          <p class="bio__dis">Hello! I'm a digital designer, inclined to analytics and frontend. Always think ahead. Love to build design systems, learn everything new, write articles and share my experience. Has a broad skillset from 3d, web and mobile app design to frontend works.</p>
         </div>
-    </body>
+        <div class="bio__photo"></div>
+      </div>
+      <div class="lp">
+        <h3 class="lp__title">Latest projects</h3>
+        <div class="lp__projects">
+          <div class="lp__projects__item">
+            <hr class="hr2"><a class="lp__projects__item__header" href="https://medium.com/@PavelLaptev/design-tokens-with-figma-aef25c42430f" target="_blank">Design tokens with Figma</a>
+            <p class="lp__projects__item__dis">A new article about Figma API. In this article I will show you how to generate design tokens via Figma API and convert them through the Style Dictionary.</p>
+          </div>
+          <div class="lp__projects__item">
+            <hr class="hr2"><a class="lp__projects__item__header" href="https://pavellaptev.github.io/wunderzin/promo/" target="_blank">Wûnderzin free Ui Kit</a>
+            <p class="lp__projects__item__dis">Figma free UI Kit of a nonexistent online magazine Wûnderzine. A few pages and many components.</p>
+          </div>
+          <div class="lp__projects__item">
+            <hr class="hr2"><a class="lp__projects__item__header" href="https://pavellaptev.github.io/markdown-theme-shell/public/" target="_blank">Markdown Theme Shell</a>
+            <p class="lp__projects__item__dis">Often, while working on a design system, we have to keep detailed documentation. For this purpose, the “Markdown Theme Shell” was made, it parses the markdown file in the HTML page, creating a sidebar and content area.</p>
+          </div>
+          <div class="lp__projects__item">
+            <hr class="hr2"><a class="lp__projects__item__header" href="https://pavellaptev.github.io/JSON-from-Figma" target="_blank">JSON from figma file</a>
+            <p class="lp__projects__item__dis">To demonstrate the power of Figma API I made <a href="https://pavellaptev.github.io/JSON-from-Figma" target="_blank">this webpage</a> as an experiment. On this page you could get a full JSON structure, pages and nested artboards, pages or artboards only and also filter all artboards by a flag name.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cs">
+        <h3 class="cs__title">Case studies</h3>
+        <div class="cs__projects">
+          <div class="cs__projects__item"><a class="cs__projects__item__header" href="https://readymag.com/LaptevPavel/PLprojects/2/" target="_blank">Design-system for the Sberbank mobile platform UFS</a></div>
+          <div class="cs__projects__item"><a class="cs__projects__item__header" href="https://readymag.com/LaptevPavel/PLprojects/3/" target="_blank">Russian Design Cup 2015 competition tasks</a></div>
+          <div class="cs__projects__item"><a class="cs__projects__item__header" href="https://readymag.com/LaptevPavel/PLprojects/4/" target="_blank">Mobile App for EMERCOM of Russia</a></div>
+          <div class="cs__projects__item"><a class="cs__projects__item__header" href="https://pavellaptev.github.io/JSON-from-Figma" target="_blank">Mascots design for Wirex</a></div>
+          <div class="cs__projects__item"><a class="cs__projects__item__header" href="https://pavellaptev.github.io/JSON-from-Figma" target="_blank">"NextGen" conception for Sberbank Online</a></div>
+        </div>
+      </div>
+      <div class="artcls">
+        <h3 class="artcls__title">Articles</h3>
+        <div class="artcls__items">
+          <ul class="artcls__items__item">
+            <li><a class="artcls__items__header" href="https://medium.com/@PavelLaptev/design-tokens-with-figma-aef25c42430f" target="_blank">Design tokens with Figma</a></li>
+            <li><a class="artcls__items__header" href="https://medium.com/@PavelLaptev/how-to-use-custom-fonts-with-framerx-b8ee3895cce0" target="_blank">How to use custom fonts with FramerX</a></li>
+            <li><a class="artcls__items__header" href="https://medium.com/@PavelLaptev/lesser-known-css-properties-in-gifs-966a143497ba" target="_blank">Lesser-known CSS properties in GIFs</a></li>
+            <li><a class="artcls__items__header" href="https://blog.framer.com/professor-spot-and-inputs-validation-in-framer-x-83da6d35f771" target="_blank">Professor Spot and Inputs Validation in FramerX</a></li>
+            <li><a class="artcls__items__header" href="https://blog.prototypr.io/use-real-data-in-framer-x-3801834e3f59" target="_blank">How to use real data in FramerX</a></li>
+            <li><a class="artcls__items__header" href="https://medium.com/@PavelLaptev/framer-x-beta-overview-and-examples-58dba80a6865" target="_blank">FramerX Beta overview and examples</a></li>
+            <li><a class="artcls__items__header" href="https://medium.com/@PavelLaptev/css-weekly-2-an-image-on-the-left-text-on-the-left-a5e59b2acdb5" target="_blank">CSS weekly #2: An image on the left, text on the right</a></li>
+            <li><a class="artcls__items__header" href="https://medium.com/@PavelLaptev/css-weekly-1-masonry-layout-b26ae670accd" target="_blank">CSS weekly #1: Masonry layout</a></li>
+            <li><a class="artcls__items__header" href="https://itnext.io/figma-web-api-c581ba769e04" target="_blank">Figma web API</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="soc">
+        <hr class="hr2">
+        <h3 class="soc__title">Links</h3>
+        <div class="soc__items">
+          <div class="soc__items__item">
+            <div class="soc__items__item__logo" style="background-image: url(images/md-ico.svg)"></div><a class="soc__items__item__link" href="https://medium.com/@PavelLaptev" target="_blank">Medium</a>
+          </div>
+          <div class="soc__items__item">
+            <div class="soc__items__item__logo" style="background-image: url(images/gh-ico.svg)"></div><a class="soc__items__item__link" href="https://github.com/PavelLaptev" target="_blank">Github</a>
+          </div>
+          <div class="soc__items__item">
+            <div class="soc__items__item__logo" style="background-image: url(images/codep-ico.svg)"></div><a class="soc__items__item__link" href="https://codepen.io/PavelLaptev" target="_blank">Codepen</a>
+          </div>
+          <div class="soc__items__item">
+            <div class="soc__items__item__logo" style="background-image: url(images/in-ico.svg)"></div><a class="soc__items__item__link" href="https://www.linkedin.com/in/pavel-laptev" target="_blank">Linkedin</a>
+          </div>
+          <div class="soc__items__item">
+            <div class="soc__items__item__logo" style="background-image: url(images/tmblr-ico.svg)"></div><a class="soc__items__item__link" href="http://dariographics.tumblr.com" target="_blank">Tumblr</a>
+          </div>
+          <div class="soc__items__item">
+            <div class="soc__items__item__logo" style="background-image: url(images/email-ico.svg)"></div><a class="soc__items__item__link" href="mailto:laptev.graphics@gmail.com">Mail me</a>
+          </div>
+        </div>
+      </div>
+      <div class="exp">
+        <h3 class="exp__title">Experience</h3>
+        <div class="exp__items">
+          <div class="exp__items__item"><span class="exp__items__item__position">Product Designer, Contract </span>
+            <h4 class="exp__items__item__company">Farfetch</h4>
+            <div class="exp__items__item__details"><span class="exp__items__item__year">May 2018 – Feb 2019 </span><span class="exp__items__item__city">London, UK</span></div>
+            <div class="exp__items__item__dis">
+              <p class="exp__items__item__dis__subtitle">Responsibility</p>
+              <ul>
+                <li>Development and supervision Design system </li>
+                <li>Development and supervision of UI Kits </li>
+                <li>Prototypes</li>
+              </ul>
+              <p class="exp__items__item__dis__subtitle">Contribution: </p>
+              <p>Developing UI Kits and implementing different prototyping tools for designers to provide design flexibility. Updating and maintain design documentation.</p>
+            </div>
+          </div>
+          <div class="exp__items__item"><span class="exp__items__item__position">Senior Product Designer</span>
+            <h4 class="exp__items__item__company">Wirex</h4>
+            <div class="exp__items__item__details"><span class="exp__items__item__year">Mar 2017 – May 2018</span><span class="exp__items__item__city">London, UK</span></div>
+            <div class="exp__items__item__dis">
+              <p class="exp__items__item__dis__subtitle">Responsibility</p>
+              <ul>
+                <li>Supervising and leading a team of 7 digital designers.</li>
+                <li>Responsibility for Wirex web and mobile design.</li>
+                <li>Development and supervision UI/UX library.</li>
+                <li>Management of key projects (cryptocurrency and fiat mobile wallets).</li>
+                <li>Establishing effective coordination with developers and internal supplies.</li>
+                <li>Mentoring and upskilling the colleagues.</li>
+              </ul>
+              <p class="exp__items__item__dis__subtitle">Contribution: </p>
+              <p>Developing UI/UX library in terms of front-end framework, infinite design, architecture, technical solutions for developers’ team. Planning and executing the project for design team.</p>
+            </div>
+          </div>
+          <div class="exp__items__item"><span class="exp__items__item__position">Senior Product Designer</span>
+            <h4 class="exp__items__item__company">Sberbank-Technology</h4>
+            <div class="exp__items__item__details"><span class="exp__items__item__year">Sep 2016 – Mar 2017</span><span class="exp__items__item__city">Moscow, Russia</span></div>
+            <div class="exp__items__item__dis">
+              <p class="exp__items__item__dis__subtitle">Responsibility</p>
+              <ul>
+                <li>Supervising and leading a team of 10 digital designers.</li>
+                <li>Development of new Mobile Library for internal services.</li>
+                <li>Creating layouts, framework, guidelines for Mobile Platform of Sberbank EFS.</li>
+                <li>Establishing cooperation between developers and designers.</li>
+                <li>Creating design concepts for different Sberbank products and services (retails & corporate).</li>
+              </ul>
+              <p class="exp__items__item__dis__subtitle">Contribution: </p>
+              <p>Work experience on a huge it-project required cooperation with different departments.</p>
+              <p>UI/UX Mobile Library (React & ReactNative) in terms of strategic planning, design version, flows, UX architecture, components UI/UX, framework solutions for developers’ team.</p>
+            </div>
+          </div>
+          <div class="exp__items__item"><span class="exp__items__item__position">Art Direction</span>
+            <h4 class="exp__items__item__company">SiteSoft</h4>
+            <div class="exp__items__item__details"><span class="exp__items__item__year">Sep 2013 – Sep 2016</span><span class="exp__items__item__city">Yekaterinburg, Russia</span></div>
+            <div class="exp__items__item__dis">
+              <p class="exp__items__item__dis__subtitle">Responsibility</p>
+              <ul>
+                <li>Responsible for web-design propositions.</li>
+                <li>Leading a design team of 5 digital designers.</li>
+                <li>Creating concepts, approaching for clients, negotiating projects, clinching the deals.</li>
+                <li>Maintaining communication between clients, developers and designers.</li>
+              </ul>
+              <p class="exp__items__item__dis__subtitle">Contribution: </p>
+              <p>Building relations & delivering complex digital projects for major Russian companies and Government agencies such as ROSNEFT, Federal Beliefs Service, EMERCOM of Russia, Ministry of Defence of Russia, Ministry of Internal Affairs of Russia, ​JSC ​Goznak</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="printback"></div>
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
