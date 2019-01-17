@@ -181,8 +181,9 @@ a
     // page-break-before: always
     margin-bottom: 60px
     border-bottom: 4px solid var(--text-clr)
-    // @media print
-    //     padding-top: 60px
+    @media print
+        page-break-before: always
+        padding-top: 40px
     &__title
         margin-top: 40px
         margin-bottom: 28px
@@ -206,10 +207,7 @@ a
                 font-family: 'Archivo Black', sans-serif
 
 .exp
-    page-break-before: always
     padding-bottom: 60px
-    @media print
-        padding-top: 40px
         // padding-bottom: 300px
     &__items
         display: grid
