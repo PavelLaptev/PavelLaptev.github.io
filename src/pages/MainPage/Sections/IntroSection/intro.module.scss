@@ -1,0 +1,82 @@
+@import "../../../../style/common";
+
+.wrap {
+  z-index: 1;
+  padding-top: 60px;
+  overflow: visible;
+  @media screen and (max-width: $tablet) {
+    padding-top: 40px;
+  }
+  @media screen and (max-width: $mobile) {
+    padding-top: 30px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+  }
+}
+
+.about {
+  z-index: 999;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  @media screen and (max-width: $tablet) {
+    order: 2;
+  }
+  &:after {
+    content: "";
+    background-color: var(--secondary-clr);
+    height: $divider-height;
+    width: 70%;
+  }
+}
+
+.myLogo {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 10px;
+  @media screen and (max-width: $tablet) {
+    margin-top: 0;
+  }
+  svg {
+    fill: var(--secondary-clr);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.abouttext {
+  @include fluid-type($mobile, $desktop, 24px, 30px);
+  color: var(--secondary-clr);
+  font-size: 28px;
+  line-height: 158%;
+  max-width: 620px;
+  padding-top: 280px;
+  margin-bottom: 80px;
+  @media screen and (max-width: $tablet) {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: $mobile) {
+    margin-bottom: 40px;
+  }
+}
+
+.promo {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: flex-end;
+  @media screen and (max-width: $tablet) {
+    order: 1;
+  }
+}

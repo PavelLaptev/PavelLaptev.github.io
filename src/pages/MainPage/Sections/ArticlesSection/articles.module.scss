@@ -1,0 +1,84 @@
+@import "../../../../style/common";
+
+$back-clr: black;
+$top-margin: 80px;
+
+.container {
+  &::before {
+    content: "";
+    display: inline-block;
+    background-color: var(--secondary-clr);
+    height: $divider-height;
+    width: 70%;
+  }
+}
+
+.articles {
+  position: relative;
+  z-index: 1;
+  margin: $top-margin * 2 0 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 52px;
+  @media screen and (max-width: $tablet) {
+    margin: $top-margin * 1.6 0 100px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: $mobile) {
+    margin: $top-margin * 1.2 0 100px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 32px;
+  }
+}
+
+.link {
+  display: flex;
+  @include fluid-type($mobile, $desktop, 22px, 32px);
+  font-family: "md-out", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 114.7%;
+  color: var(--secondary-clr);
+  transition: color 0.1s ease;
+  &:hover {
+    color: var(--link-hover-clr);
+  }
+}
+
+.back {
+  margin-top: $top-margin;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 20px);
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: $tablet) {
+    margin-top: 60px;
+  }
+  @media screen and (max-width: $mobile) {
+    margin-top: 40px;
+  }
+  &title {
+    @include fluid-type($mobile, $desktop, 20px, 32px);
+    font-family: "md-out", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 114.7%;
+    &:first-child {
+      text-align: left;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+  &line {
+    overflow: visible;
+    height: 100%;
+    stroke: $back-clr;
+    stroke-width: $divider-height * 2;
+  }
+}
