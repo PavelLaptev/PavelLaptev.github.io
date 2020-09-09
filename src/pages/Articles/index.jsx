@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Cursor } from "../../components/";
 import styles from "./articles.module.scss";
 
 const Articles = () => {
   return (
-    <Cursor>
       <div className={styles.wrap}>
         <nav>
           <Link className={styles.link} to="/">
@@ -17,7 +15,6 @@ const Articles = () => {
         </nav>
         <h1>This is articles</h1>
       </div>
-    </Cursor>
   );
 };
 

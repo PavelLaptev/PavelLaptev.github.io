@@ -1,7 +1,6 @@
 import React from "react";
 
 import styles from "./mainpage.module.scss";
-import { Cursor } from "../../components/";
 import { IntroSection, ProjectsSection, ArticlesSection } from "./Sections";
 
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -59,7 +58,7 @@ const Menu = (props) => {
         key={i}
         onClick={handleClick}
         className={`${styles.menuitem} ${
-          i === currentItem ? styles.menuitem_active : null
+          i === currentItem ? styles.menuitem_active : ""
         }`}
       >
         <h3 className={styles.menutext}>{item}</h3>
@@ -81,7 +80,7 @@ const MainPage = () => {
   const articlesRef = React.useRef(null);
 
   return (
-    <Cursor>
+    <>
       <Menu
         items={["Hello", "Projects", "Articles"]}
         refs={[articlesRef, projectsRef, articlesRef]}
@@ -95,7 +94,7 @@ const MainPage = () => {
         <ProjectsSection order={1} ref={projectsRef} />
         <ArticlesSection order={2} ref={articlesRef} />
       </div>
-    </Cursor>
+    </>
   );
 };
 
