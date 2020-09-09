@@ -1,21 +1,15 @@
 @import "../../../../../style/common";
 
-.link {
+.item {
   position: relative;
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  &:hover {
-    .title {
-      color: var(--link-hover-clr);
-    }
-  }
 }
 
 .title {
   mix-blend-mode: difference;
   z-index: 0;
-  pointer-events: none;
   font-family: "md-out", sans-serif;
   @include fluid-type($mobile, $desktop, 30px, 52px);
   font-style: normal;
@@ -26,6 +20,9 @@
   margin: 0;
   margin-bottom: 16px;
   transition: color 0.1s ease;
+  &:hover {
+    color: var(--link-hover-clr);
+  }
 }
 
 .text {

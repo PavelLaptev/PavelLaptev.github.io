@@ -3,16 +3,17 @@ import styles from "./project.module.scss";
 
 const Project = (props) => {
   return (
-    <a
-      rel="noopener noreferrer"
-      href={props.url}
-      className={styles.link}
-      data-preview
-      target="_blank"
-    >
-      <h1 className={styles.title}>{props.title}</h1>
+    <div className={styles.item}>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href={props.url}
+        className={styles.title}
+      >
+        {props.title}
+      </a>
       <p className={styles.text}>{props.text}</p>
-    </a>
+    </div>
   );
 };
 
