@@ -1,0 +1,31 @@
+@import "../../styles/tokens";
+
+.wrap {
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 400px;
+  transform: translateX(-20px);
+  width: calc(100% + 40px);
+}
+
+.link {
+  box-sizing: content-box;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  &:hover {
+    .icon {
+      fill: var(--active-clr);
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  fill: var(--primary-clr);
+  transition: fill 0.1s ease-in-out;
+}

@@ -1,0 +1,14 @@
+.badge {
+  pointer-events: none;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  display: inline-block;
+  font-family: "made-outer", sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  color: var(--secondary-clr);
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: var(--active-clr);
+}

@@ -1,0 +1,45 @@
+@import "../../styles/index.scss";
+
+.plugin {
+  &:hover {
+    .stat {
+      opacity: 0.8;
+    }
+    .label {
+      color: var(--active-clr);
+    }
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+  .label {
+    display: flex;
+    font-family: "made-outer", sans-serif;
+    @include fluid-type($mobile, $desktop, 24px, 40px);
+    font-weight: bold;
+    color: var(--primary-clr);
+    text-decoration: none;
+    margin: 0;
+    transition: all 0.1s ease;
+  }
+  .stat {
+    display: flex;
+    align-items: center;
+    opacity: 0.4;
+    margin-top: 16px;
+    transition: all 0.1s ease;
+    &_item {
+      display: flex;
+      align-items: center;
+      margin-right: 14px;
+      span {
+        font-family: "made-outer", sans-serif;
+        font-size: 18px;
+        margin-left: 6px;
+      }
+    }
+  }
+}

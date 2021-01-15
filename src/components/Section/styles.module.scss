@@ -1,0 +1,26 @@
+@import "../../styles/index.scss";
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include fluid-size(padding-bottom, $mobile, $desktop, 52px, 60px);
+}
+
+.title {
+  font-family: "made-outer", sans-serif;
+  color: var(--primary-clr);
+  margin-top: 24px;
+  @include fluid-type($mobile, $desktop, 32px, 80px);
+}
+
+.content {
+  display: grid;
+  gap: 16px 24px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  transform: translateX(-20px);
+  width: calc(100% + 40px);
+  @media screen and (max-width: 400px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../styles/index.scss";
+
+.card {
+  position: relative;
+  align-self: flex-start;
+  padding: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--primary-clr);
+  border-radius: 16px;
+  transition: all 0.16s ease;
+  &_hover {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+  }
+}

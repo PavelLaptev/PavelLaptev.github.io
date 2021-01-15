@@ -1,0 +1,42 @@
+@import "./styles/index.scss";
+
+.lightTheme {
+  --primary-clr: #000;
+  --secondary-clr: #f8f8f8;
+  --active-clr: #f45;
+}
+
+.darkTheme {
+  --primary-clr: #ffebeb;
+  --secondary-clr: #1d1d1d;
+  --active-clr: #f45;
+}
+
+.root {
+  width: 100%;
+  background-color: var(--secondary-clr);
+  @include fluid-size(padding-top, $mobile, $desktop, 32px, 80px);
+  @include fluid-padding($mobile, $desktop, 32px, 120px);
+  ::selection {
+    background: var(--active-clr);
+    color: var(--secondary-clr);
+  }
+}
+
+.wrap {
+  position: relative;
+  margin: 0 auto;
+  max-width: $desktop;
+}
+
+.themeSwitcher {
+  position: absolute;
+  top: 0;
+  @include fluid-size(right, $mobile, $desktop, 32px, 120px);
+  @media screen and (max-width: $tablet) {
+    position: relative;
+    margin-bottom: 24px;
+    top: unset;
+    right: unset;
+  }
+}

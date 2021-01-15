@@ -1,0 +1,32 @@
+@import "../../styles/index.scss";
+
+.article {
+  &:hover {
+    .label {
+      color: var(--active-clr);
+    }
+  }
+}
+
+.label {
+  display: flex;
+  font-family: "made-outer", sans-serif;
+  @include fluid-type($mobile, $desktop, 20px, 32px);
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--primary-clr);
+  text-decoration: none;
+  margin: 0;
+  transition: all 0.1s ease;
+}
+
+.text {
+  pointer-events: none;
+  opacity: 0.6;
+  margin-bottom: 4px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  @include fluid-type($mobile, $desktop, 18px, 24px);
+  line-height: 1.4;
+}

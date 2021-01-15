@@ -1,15 +1,20 @@
 {
-  "short_name": "Pavel Laptev",
-  "name": "Pavel Lapev",
+  "short_name": "Pavel Lapte",
+  "name": "Pavel Laptev — digital designer",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favicon-64x64.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#364aff",
+  "theme_color": "#000000",
   "background_color": "#ffffff"
 }
