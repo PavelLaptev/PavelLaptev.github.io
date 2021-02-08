@@ -24,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "git push origin `git subtree split --prefix dist master`:gh-pages --force"
   },
   "eslintConfig": {
     "extends": [
