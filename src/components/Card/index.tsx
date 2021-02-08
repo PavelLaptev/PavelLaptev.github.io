@@ -10,21 +10,22 @@ interface Props {
   date?: string;
 }
 
-const addDigits = (dateString: any) => {
-  dateString = dateString.split(".");
-  var sum = 0;
-  for (var i = 0; i < dateString.length; i++) {
-    sum += parseInt(dateString[i], 10);
-  }
-  return sum;
+const parseDate = (str: any) => {
+  var mdy = str.split(".");
+  return new Date(mdy[2], mdy[0] - 1, mdy[1]);
+};
+
+const datediff = (first: any, second: any) => {
+  // Take the difference between the dates and divide by milliseconds per day.
+  // Round to nearest whole number to deal with DST.
+  return Math.round((second - first) / (1000 * 60 * 60 * 24));
 };
 
 const Card: React.FunctionComponent<Props> = (props) => {
   const isOutDated = () => {
     let now = new Date();
-    let currentDate = now.getDate() + (now.getMonth() + 1) + now.getFullYear();
-    let checkDate = addDigits(props.date);
-    let daysPassed = currentDate - checkDate;
+    let currentDate = `${now.getDate()}.${now.getMonth()}.${now.getFullYear()}`;
+    let daysPassed = datediff(parseDate(currentDate), parseDate(props.date));
 
     // console.log(daysPassed);
 

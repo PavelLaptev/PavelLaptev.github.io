@@ -1,9 +1,16 @@
 const articlesData = [
   {
+    title:
+      "How to create a Pan`n`Pinch component for a Figma plugin. Step-by-step Recipe.",
+    url:
+      "https://pavellaptev.medium.com/how-to-create-a-pan-n-pinch-component-for-a-figma-plugin-step-by-step-recipe-afea4d296e0",
+    date: "8.2.2021",
+  },
+  {
     title: "Kinetic Typography with ThreeJS",
     url:
       "https://blog.prototypr.io/kinetictypography-with-threejs-2bed948720a2",
-    date: "14.1.2021",
+    date: "14.2.2021",
   },
   {
     title: "Make text pattern background with <canvas>",
