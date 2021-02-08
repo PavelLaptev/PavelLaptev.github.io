@@ -15,7 +15,6 @@ const FigmaPlugins: React.FunctionComponent = () => {
       )
       .then((res) => {
         let pluginsArray = res.data.meta;
-        // console.log(pluginsArray);
         setPlugins(pluginsArray);
       });
   }, []);
@@ -41,7 +40,7 @@ const FigmaPlugins: React.FunctionComponent = () => {
                 key={i}
                 href={pluginData.link}
                 className={styles.plugin}
-                badge
+                // badge
               >
                 <img
                   className={styles.icon}
