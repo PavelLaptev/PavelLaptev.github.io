@@ -13,8 +13,7 @@ const Projects: React.FunctionComponent = () => {
             href={item.url}
             key={i}
             className={styles.article}
-            badge
-            date={item.date}
+            new={item.new}
           >
             <h1 className={styles.label}>{item.title}</h1>
             <p className={styles.text}>{item.text}</p>

@@ -5,9 +5,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 400px;
+  flex-wrap: wrap;
+  max-width: 500px;
   transform: translateX(-20px);
   width: calc(100% + 40px);
+  @media screen and (max-width: 400px) {
+    justify-content: flex-start;
+  }
 }
 
 .link {
@@ -19,6 +23,9 @@
     .icon {
       fill: var(--active-clr);
     }
+  }
+  @media screen and (max-width: 400px) {
+    transform: scale(0.8);
   }
 }
 
