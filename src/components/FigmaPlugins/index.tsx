@@ -11,7 +11,7 @@ const FigmaPlugins: React.FunctionComponent = () => {
   React.useEffect(() => {
     axios
       .get(
-        `https://api.allorigins.win/raw?url=https://www.figma.com/api/plugins/profile/134689`
+        `https://secure-thicket-88117.herokuapp.com/https://api.allorigins.win/raw?url=https://www.figma.com/api/plugins/profile/134689`
       )
       .then((res) => {
         let pluginsArray = res.data.meta;
