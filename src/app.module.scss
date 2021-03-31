@@ -31,8 +31,8 @@
 
 .themeSwitcher {
   position: absolute;
-  top: 0;
-  @include fluid-size(right, $mobile, $desktop, 32px, 120px);
+  top: 20px;
+  right: 0;
   @media screen and (max-width: $tablet) {
     position: relative;
     margin-bottom: 24px;
