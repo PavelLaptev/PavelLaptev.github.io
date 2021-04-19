@@ -1,5 +1,12 @@
 const OtherProjects = [
   {
+    url: "https://pavellaptev.github.io/squircle-houdini-css/",
+    title: "Squircle Houdini CSS module",
+    text: "A lightweight CSS module for cubic-bezier squircles.",
+    date: "15.4.2021",
+    new: true,
+  },
+  {
     url: "https://pavellaptev.github.io/kinetik-typography-three-js/#/",
     title: "Kinetic Typography with ThreeJS",
     text:

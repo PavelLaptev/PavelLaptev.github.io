@@ -1,5 +1,12 @@
 const articlesData = [
   {
+    title: "Squircles on the Web — Houdini to the rescue 🚑 🚀",
+    url:
+      "https://pavellaptev.medium.com/squircles-on-the-web-houdini-to-the-rescue-5ef11f646b72",
+    date: "15.4.2021",
+    new: true,
+  },
+  {
     title:
       "How to create a Pan`n`Pinch component for a Figma plugin. Step-by-step Recipe.",
     url:
