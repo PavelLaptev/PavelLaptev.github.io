@@ -3,12 +3,21 @@ import styles from "./styles.module.scss";
 
 interface Props {
   className?: string;
-  checked: boolean;
   onChange: () => void;
 }
 
 const ThemeSwitcher: React.FunctionComponent<Props> = (props) => {
-  const [toggle, setToggle] = React.useState(false);
+  const [toggle, setToggle] = React.useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? true : false
+  );
+
+  React.useEffect(() => {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        setToggle(e.matches ? true : false);
+      });
+  }, []);
 
   const hadleCheckbox = () => {
     setToggle(!toggle);
@@ -22,11 +31,7 @@ const ThemeSwitcher: React.FunctionComponent<Props> = (props) => {
       }`}
     >
       <div className={styles.toggler}>
-        <input
-          type="checkbox"
-          onChange={hadleCheckbox}
-          checked={props.checked}
-        />
+        <input type="checkbox" onChange={hadleCheckbox} checked={toggle} />
       </div>
     </div>
   );

@@ -7,7 +7,17 @@ import Projects from "./components/Projects";
 import ThemeSwitcher from "./components/ThemeSwitcher/";
 
 const App = () => {
-  const [toggleTheme, setToggleTheme] = React.useState(false);
+  const [toggleTheme, setToggleTheme] = React.useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? true : false
+  );
+
+  React.useEffect(() => {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        setToggleTheme(e.matches ? true : false);
+      });
+  }, []);
 
   return (
     <div
@@ -18,7 +28,6 @@ const App = () => {
       <main className={styles.wrap}>
         <ThemeSwitcher
           className={styles.themeSwitcher}
-          checked={toggleTheme}
           onChange={() => setToggleTheme(!toggleTheme)}
         />
         <Header />
